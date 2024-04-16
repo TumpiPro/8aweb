@@ -1,6 +1,6 @@
 console.log("Hello Majmok")
 
-alert("Vigyázat Négerek")
+alert("Figyelem ez az oldal egy poén az osztájtársaim részére!!!\n(HA TE NEM VAGY ŐK HAGYD EL AZ OLDALT)")
 
 let név = "Buznyák Péter"
 
