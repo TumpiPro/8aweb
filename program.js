@@ -4,12 +4,15 @@ alert("Figyelem ez az oldal egy poén az osztájtársaim részére!!!(HA TE NEM 
 
 let név = "Buznyák Péter"
 
-let bemenet = document.getElementById("bemenet")
-let ertek = bemenet.value
-console.log(ertek)
-bemenet.value = ""
-
 document.body.style.backgroundColor = "Pink"
+
+let KártyaMező;
+
+document.getElementById("KártyaBeküldés").onclick = function() {
+    KártyaMező = document.getElementById("Bemenet").value;
+    console.log(KártyaMező);
+    document.getElementById("kártyaszámod").textContent = KártyaMező;
+}
 
 let gomb = document.getElementById("Kattgom")
 function katt(){
