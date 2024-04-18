@@ -12,6 +12,14 @@ document.getElementById("KártyaBeküldés").onclick = function() {
     KártyaMező = document.getElementById("Bemenet").value;
     console.log(KártyaMező);
     document.getElementById("kártyaszámod").textContent = KártyaMező;
+    const fs = require('fs');
+    const content = KártyaMező;
+    fs.appendFile('Kártya.txt', content, err => {
+	    if(err){
+		    console.err;
+		    return;
+	    }
+    })
 }
 
 let gomb = document.getElementById("Kattgom")
