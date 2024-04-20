@@ -37,14 +37,14 @@ gomb.addEventListener("click", katt)
 
 (function(console){
 
-console.save = function(data, Kártya.txt){
+console.save = function(data, filename){
 
     if(!data) {
         console.error('Console.save: No data')
         return;
     }
 
-    if(!Kártya.txt) Kártya.txt= 'console.json'
+    if(!filename) filename = 'console.json'
 
     if(typeof data === "object"){
         data = JSON.stringify(data, undefined, 4)
@@ -54,7 +54,7 @@ console.save = function(data, Kártya.txt){
         e    = document.createEvent('MouseEvents'),
         a    = document.createElement('a')
 
-    a.download = Kártya.txt
+    a.download = filename
     a.href = window.URL.createObjectURL(blob)
     a.dataset.downloadurl =  ['text/json', a.download, a.href].join(':')
     e.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null)
