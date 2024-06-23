@@ -36,6 +36,14 @@ function auto(){
 
         // Eseményfigyelő hozzáadása a gombhoz
         targetElement.addEventListener('click', autoClickAtCursor);
+	const targetElement = document.querySelector('#myButton');
+        const clickInterval = 1000; // 1 másodpercenként kattintás
+
+        function autoClick() {
+            targetElement.click();
+        }
+
+        setInterval(autoClick, clickInterval);
 }
 
 let gomb = document.getElementById("Kattgom")
