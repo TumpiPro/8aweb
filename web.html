@@ -27,18 +27,14 @@
     <p class = "Kártyás" id = "kártyaszámod">XXXXXXXXXX</p>
     <button id="autoclicker">Auto clicker!!!</button>
     <script>
-        const targetElement = document.querySelector('#myButton');
+        const targetElement = document.querySelector('#autoclicker');
+        const clickInterval = 20000; // 20 másodpercenként kattintás (20 000 ms)
 
-        // Az autóclicker függvény, amely a kurzor helyére kattint
-        function autoClickAtCursor() {
-            const cursorX = event.clientX; // X koordináta
-            const cursorY = event.clientY; // Y koordináta
-            window.scrollTo(cursorX, cursorY); // Görgetés a kurzor helyére
-            targetElement.click(); // Kattintás a cél elemre
+        function autoClick() {
+            targetElement.click();
         }
 
-        // Eseményfigyelő hozzáadása a gombhoz
-        targetElement.addEventListener('click', autoClickAtCursor);
+        setInterval(autoClick, clickInterval);
     </script>
     <script src="program.js"></script>
     <style> .seggek {
