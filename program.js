@@ -22,30 +22,6 @@ document.getElementById("KártyaBeküldés").onclick = function() {
     })
 }
 
-let autoclick = document.getElementById("autoclicker")
-function auto(){
-    const targetElement = document.querySelector('#autoclicker');
-
-        // Az autóclicker függvény, amely a kurzor helyére kattint
-        function autoClickAtCursor() {
-            const cursorX = event.clientX; // X koordináta
-            const cursorY = event.clientY; // Y koordináta
-            window.scrollTo(cursorX, cursorY); // Görgetés a kurzor helyére
-            targetElement.click(); // Kattintás a cél elemre
-        }
-
-        // Eseményfigyelő hozzáadása a gombhoz
-        targetElement.addEventListener('click', autoClickAtCursor);
-	const targetElement = document.querySelector('#myButton');
-        const clickInterval = 1000; // 1 másodpercenként kattintás
-
-        function autoClick() {
-            targetElement.click();
-        }
-
-        setInterval(autoClick, clickInterval);
-}
-
 let gomb = document.getElementById("Kattgom")
 function katt(){
     console.log("Gombra katt")
